@@ -13,6 +13,9 @@ function Projects() {
         <p>
           <Link to='/readmore'> Read more</Link>
         </p>
+        <p>
+          <Link to='/clock'> Clock</Link>
+        </p>
       </div>
     </div>
   );

@@ -36,3 +36,22 @@ border: 1px solid green;
   border-bottom: 1px solid #9999;
   padding: 1rem;
 }
+
+/* ------------------------------- */
+/* ------------NAV BAR------------ */
+/* ------------------------------- */
+
+.clock-wrapper {
+  width: 100vw;
+  height: 80vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.clock {
+  font-size: 5rem;
+  border: 1px solid #0000;
+  font-family: 'Dancing Script', cursive;
+}

@@ -10,6 +10,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import ReadMore from "./Components/ReadMore";
 import Projects from "./Pages/Projects";
 import Home from "./Pages/Home";
+import Clock from "./Components/Clock";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='projects' element={<Projects />} />
+        <Route path='clock' element={<Clock />} />
         <Route path='readmore' element={<ReadMore />} />
       </Routes>
     </div>
