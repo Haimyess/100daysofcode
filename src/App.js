@@ -11,6 +11,7 @@ import ReadMore from "./Components/ReadMore";
 import Projects from "./Pages/Projects";
 import Home from "./Pages/Home";
 import Clock from "./Components/Clock";
+import Modal from "./Components/Modal";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='projects' element={<Projects />} />
         <Route path='clock' element={<Clock />} />
         <Route path='readmore' element={<ReadMore />} />
+        <Route path='modal' element={<Modal />} />
       </Routes>
     </div>
   );
