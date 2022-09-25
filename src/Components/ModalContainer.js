@@ -2,6 +2,8 @@
 
 import React from "react";
 
+// Fix later the container position and figure out how to change the background of the entire page when clicking th button to open the modal.
+
 function ModalContainer({ onClose }) {
   return (
     <div className='modal-background '>

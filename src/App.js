@@ -12,26 +12,18 @@ import Projects from "./Pages/Projects";
 import Home from "./Pages/Home";
 import Clock from "./Components/Clock";
 import Modal from "./Components/Modal";
+import ColorMode from "./Components/ColorMode";
 
 function App() {
   return (
     <div className='App'>
-      <header className='nav-container'>
-        <Link to='/'>
-          <img src='' alt='Logo' />
-        </Link>
-        <nav>
-          <ul>
-            <Link to='/projects'>Projects</Link>
-          </ul>
-        </nav>
-      </header>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='projects' element={<Projects />} />
         <Route path='clock' element={<Clock />} />
         <Route path='readmore' element={<ReadMore />} />
         <Route path='modal' element={<Modal />} />
+        <Route path='color-mode' element={<ColorMode />} />
       </Routes>
     </div>
   );

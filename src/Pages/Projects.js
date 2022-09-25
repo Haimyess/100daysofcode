@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 function Projects() {
   return (
     <div>
+      <header className='nav-container'>
+        <Link to='/'>
+          <img src='' alt='Logo' />
+        </Link>
+        <nav>
+          <ul>
+            <Link to='/projects'>Projects</Link>
+          </ul>
+        </nav>
+      </header>
       <div className='project-container'>
         <div>
           <p>
@@ -26,6 +36,11 @@ function Projects() {
           <div>
             <p>
               <Link to='/modal'> Modal</Link>
+            </p>
+          </div>
+          <div>
+            <p>
+              <Link to='/color-mode'> Ligh/night mode</Link>
             </p>
           </div>
         </div>

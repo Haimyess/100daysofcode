@@ -23,6 +23,16 @@ function Clock() {
   //   console.log(seconds);
   return (
     <div>
+      <header className='nav-container'>
+        <Link to='/'>
+          <img src='' alt='Logo' />
+        </Link>
+        <nav>
+          <ul>
+            <Link to='/projects'>Projects</Link>
+          </ul>
+        </nav>
+      </header>
       <p>
         <Link to='/'>Go back Home..</Link>
       </p>
@@ -31,8 +41,8 @@ function Clock() {
         <div className='clock'>
           <div>
             <span className='clock-time'>{clock} &nbsp;</span>
-            <span className='clock-day'>{currDay} </span>
           </div>
+          {/* <span className='clock-day'>{currDay} </span> */}
         </div>
       </div>
       {/* <div className='clock-wrapper'>
