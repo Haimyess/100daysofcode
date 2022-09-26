@@ -173,13 +173,13 @@ border: 1px solid green;
 }
 
 .colormode-container {
-
-width: 100%;
-height: 90vh;
-display: flex;
-justify-content: center;
-align-items: center;
-
+  
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 #light {
@@ -191,7 +191,7 @@ align-items: center;
 }
 
 #dark .colormode-p {
-color: rgb(245, 234, 149);
+  color: rgb(245, 234, 149);
 }
 
 #dark .logo {
@@ -204,3 +204,56 @@ color: rgb(245, 234, 149);
   color: rgb(245, 234, 149);
 }
 
+
+/* ------------------------------- */
+/* -------------MODAL----------- */
+/* ------------------------------- */
+
+/* .islands-wrapper {
+ display: flex; 
+ flex-direction: column;
+ justify-content: center;
+  
+
+} */
+.islands-container {
+  /* width: 70vw; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 3rem;
+
+}
+.island {
+  border: 2px solid #6666;
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.loadmore-btn {
+  border: none;
+  border: 2px solid #333;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.disable {
+   font-size: 1rem;
+    padding: 1rem 2rem;
+
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+} */

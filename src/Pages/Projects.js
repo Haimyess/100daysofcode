@@ -43,6 +43,11 @@ function Projects() {
               <Link to='/color-mode'> Ligh/night mode</Link>
             </p>
           </div>
+          <div>
+            <p>
+              <Link to='/loadmore'> Ligh/night mode</Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>

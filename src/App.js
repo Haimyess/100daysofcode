@@ -13,6 +13,7 @@ import Home from "./Pages/Home";
 import Clock from "./Components/Clock";
 import Modal from "./Components/Modal";
 import ColorMode from "./Components/ColorMode";
+import LoadMore from "./Components/LoadMore";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='readmore' element={<ReadMore />} />
         <Route path='modal' element={<Modal />} />
         <Route path='color-mode' element={<ColorMode />} />
+        <Route path='loadmore' element={<LoadMore />} />
       </Routes>
     </div>
   );
