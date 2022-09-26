@@ -45,7 +45,7 @@ function Projects() {
           </div>
           <div>
             <p>
-              <Link to='/loadmore'> Ligh/night mode</Link>
+              <Link to='/loadmore'> Load more</Link>
             </p>
           </div>
         </div>
