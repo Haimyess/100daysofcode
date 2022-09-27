@@ -206,27 +206,35 @@ border: 1px solid green;
 
 
 /* ------------------------------- */
-/* -------------MODAL----------- */
+/* -------------LOAD MORE----------- */
 /* ------------------------------- */
 
-/* .islands-wrapper {
- display: flex; 
- flex-direction: column;
- justify-content: center;
+.islands-wrapper {
+ width: 90vw;
+ margin: 0 5vw 0 10vw;
   
-
-} */
+  
+}
 .islands-container {
-  /* width: 70vw; */
-  display: grid;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  align-content: start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+ 
+
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 3rem;
-
+  margin: 3rem; */
+  
 }
 .island {
   border: 2px solid #6666;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  width: 10vw;
   text-align: center;
 }
 
@@ -236,6 +244,15 @@ border: 1px solid green;
 }
 
 .loadmore-btn {
+  
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+} 
+
+
+/* .loadmore-btn {
   border: none;
   border: 2px solid #333;
   padding: 1rem 2rem;
@@ -243,17 +260,56 @@ border: 1px solid green;
   text-align: center;
   cursor: pointer;
   font-size: 1rem;
-}
+} */
 
-.disable {
-   font-size: 1rem;
-    padding: 1rem 2rem;
-
-}
+/* .disable {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  
+} */
 
 /* main {
   display: flex;
   flex-direction: column;
- 
+  
   align-items: center;
 } */
+
+
+/* ------------------------------- */
+/* -------------READ MORE---------- */
+/* ------------------------------- */
+
+.readmore-wrapper {
+  width: 100%;
+  height: 90vh;
+ position: relative;
+ 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.readmore-container {
+  width: 30vw;
+  /* font-size: calc(1.5vw, 5vw); */
+  font-size: 1.3vw;
+  border: 1px solid #000000;
+  padding: 1.5rem;
+  text-align: justify;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.readmore-btn {
+  margin-left: .5rem;
+  cursor: pointer;
+  color: rgba(48, 96, 240, 0.5);
+
+}
+
+.readmore-btn:hover {
+  opacity: 50%;
+}

@@ -14,7 +14,7 @@ function LoadMore() {
   const displayItems = items.slice(0, load);
   console.log(displayItems);
 
-  console.log(load);
+  const overQty = console.log(load);
 
   //   console.log(data.length);
   const handleLoad = () => {
@@ -50,9 +50,10 @@ function LoadMore() {
 
         <div className='btn-container'>
           <button
-            className={disable ? "disable" : "loadmore-btn"}
+            className='loadmore-btn'
+            // className={!disable ? "" : "loadmore-btn"}
             onClick={handleLoad}
-            disabled={items.length < load && disable}
+            disabled={items.length < load && true}
             // disabled
           >
             Load more
