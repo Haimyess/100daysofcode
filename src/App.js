@@ -14,6 +14,7 @@ import Clock from "./Components/Clock";
 import Modal from "./Components/Modal";
 import ColorMode from "./Components/ColorMode";
 import LoadMore from "./Components/LoadMore";
+import CreditCard from "./Components/CreditCard";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='modal' element={<Modal />} />
         <Route path='color-mode' element={<ColorMode />} />
         <Route path='loadmore' element={<LoadMore />} />
+        <Route path='credit-card' element={<CreditCard />} />
       </Routes>
     </div>
   );

@@ -48,6 +48,11 @@ function Projects() {
               <Link to='/loadmore'> Load more</Link>
             </p>
           </div>
+          <div>
+            <p>
+              <Link to='/credit-card'> Credit Card</Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
