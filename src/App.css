@@ -315,10 +315,113 @@ border: 1px solid green;
 }
 
 
+
+
+
+
+
+
 .creditcard-container {
+  /* background-color: #9999; */
   margin-top: 3rem;
 }
 
+.creditcard-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #000000; */
+
+}
+
 .creditcard-form {
+  width: 25vw;
+  height: 40vh;
+  /* border: 1px solid green; */
+ 
+}
+
+.creditcard-inputs {
+  /* border: 1px solid #5555; */
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.input-full {
+  padding: .7rem;
+  width: 100%;
+  margin: .5rem 0;
   
+  /* border: 1px solid #000000; */
+ 
+}
+
+input {
+  font-size: 1rem;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #9999;
+}
+
+.input-secure-container {
+ 
+  display: flex;
+ 
+  /* justify-content: space-between; */
+ 
+}
+
+.input-secure {
+  /* width: 50%; */
+  padding: .8rem;
+  
+}
+
+input::placeholder {
+
+font-size: 1rem;
+}
+.input-col {
+  display: flex;
+  flex-direction: column;
+}
+.label-input {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.question {
+  width: 40vw;
+  
+  padding: 1rem .3rem;
+ 
+}
+
+.faqs-title-container {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #000000;
+}
+
+.faqs-title {
+  font-size: 1.5rem;
+}
+
+.faqs {
+  border-radius: 20px;
+}
+
+.question-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid #000000;
+}
+
+.answer {
+  padding: .5rem 0 .5rem 1rem;
+}
+
+.question-btn {
+  font-size: 1.5rem;
+  padding-top: 3rem;
 }

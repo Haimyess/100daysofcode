@@ -34,39 +34,63 @@ const CreditCard = () => {
           name={name}
           number={number}
         />
-        <form className='creditcard-form'>
-          <input
-            type='tel'
-            name='number'
-            value={number}
-            placeholder='Card Number'
-            onChange={(e) => setNumber(e.target.value)}
-            onFocus={(e) => setFocus(e.target.name)}
-          />
-          <input
-            type='text'
-            name='name'
-            value={name}
-            placeholder='Name'
-            onChange={(e) => setName(e.target.value)}
-            onFocus={(e) => setFocus(e.target.name)}
-          />
-          <input
-            type='tel'
-            name='expiry'
-            value={expiry}
-            placeholder='MM/YY Expiry'
-            onChange={(e) => setExpiry(e.target.value)}
-            onFocus={(e) => setFocus(e.target.name)}
-          />
-          <input
-            type='tel'
-            name='cvc'
-            value={cvc}
-            placeholder='Cvc'
-            onChange={(e) => setCvc(e.target.value)}
-            onFocus={(e) => setFocus(e.target.name)}
-          />
+        <form className='creditcard-form-container'>
+          <div className='creditcard-form'>
+            <div className='creditcard-inputs'>
+              <div>
+                <label className='label-input'>Name</label>
+                <input
+                  className='input-full'
+                  type='text'
+                  name='name'
+                  value={name}
+                  placeholder='Name'
+                  onChange={(e) => setName(e.target.value)}
+                  onFocus={(e) => setFocus(e.target.name)}
+                />
+              </div>
+              <div>
+                <label className='label-input'> Card number</label>
+                <input
+                  className='input-full'
+                  type='tel'
+                  name='number'
+                  value={number}
+                  placeholder='Card Number'
+                  onChange={(e) => setNumber(e.target.value)}
+                  onFocus={(e) => setFocus(e.target.name)}
+                />
+              </div>
+              <div className='inputs-secure-container'>
+                <div className='input-col'>
+                  <label className='label-input'> Exp</label>
+                  <input
+                    className='input-secure'
+                    type='tel'
+                    name='expiry'
+                    pattern='\d\d/\d\d'
+                    value={expiry}
+                    placeholder='MM/YY Expiry'
+                    onChange={(e) => setExpiry(e.target.value)}
+                    onFocus={(e) => setFocus(e.target.name)}
+                  />
+                </div>
+                <div className='input-col'>
+                  <label className='label-input'> CVC</label>
+                  <input
+                    className='input-secure'
+                    type='tel'
+                    pattern='\d{3,4}'
+                    name='cvc'
+                    value={cvc}
+                    placeholder='Cvc'
+                    onChange={(e) => setCvc(e.target.value)}
+                    onFocus={(e) => setFocus(e.target.name)}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>

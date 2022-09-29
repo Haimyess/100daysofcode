@@ -1,0 +1,29 @@
+/* 
+----Fonts-----
+
+
+----Colors-----
+
+
+----General----
+
+--container --> For all the pages, to use the center of the page 
+--wrapper --> to center the container in the center of the page
+
+
+
+
+*/
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.container {
+    border: 1px solid #000000;
+    /* padding: 1rem; */
+}
