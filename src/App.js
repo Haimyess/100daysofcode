@@ -16,6 +16,8 @@ import ColorMode from "./Components/ColorMode";
 import LoadMore from "./Components/LoadMore";
 import CreditCard from "./Components/CreditCard";
 import FAQs from "./Components/FAQs";
+import Tabs from "./Components/Tabs";
+import DatePickerFilter from "./Components/DatePickerFilter";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
         <Route path='loadmore' element={<LoadMore />} />
         <Route path='credit-card' element={<CreditCard />} />
         <Route path='faqs' element={<FAQs />} />
+        <Route path='tabs' element={<Tabs />} />
+        <Route path='date-filter' element={<DatePickerFilter />} />
       </Routes>
     </div>
   );

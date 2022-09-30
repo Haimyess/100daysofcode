@@ -13,6 +13,8 @@ function Projects() {
     { name: "Load More", link: "loadmore" },
     { name: "Credit Card", link: "credit-card" },
     { name: "FAQs", link: "faqs" },
+    { name: "Tabs", link: "tabs" },
+    { name: "Date Filter", link: "date-filter" },
   ];
   return (
     <div>
