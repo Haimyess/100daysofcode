@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import concerts from "../media/concertsData";
+import Concert from "./Concert";
 
 function DatePickerFilter() {
   //   console.log(typeof concerts[0].date);
@@ -10,18 +11,31 @@ function DatePickerFilter() {
 
   const [concertsData, setConcertsData] = useState(concerts);
   const [filteredConcert, setFilteredConcert] = useState([]);
+  console.log(filteredConcert);
 
-  //   console.log(concertsData);
+  // console.log(concertsData);
 
   const handleDate = (e) => {
     const selectedDate = e.target.value;
-    // console.log(selectedDate);
+    console.log("selected date:", selectedDate);
 
-    const concert = concertsData.filter(
-      (concert) => concert.date === JSON.stringify(selectedDate)
-    );
-
+    const concert = concertsData
+      .map((item) => {
+        return item.date;
+      })
+      .includes(selectedDate);
     console.log(concert);
+
+    // const concert = concertsData.filter(
+    //   (concert) => {
+    //     console.log("array:", concert.date);
+    //     return concert.date === selectedDate;
+    //   }
+
+    // (concert) => concert.date === JSON.stringify(selectedDate)
+    // );
+
+    // console.log(concert);
     // console.log(typeof JSON.stringify(concert));
     setFilteredConcert(concert);
   };
@@ -36,7 +50,8 @@ function DatePickerFilter() {
         <p className='title'>All Concerts</p>
 
         <div className='concert-items-container'>
-          {concertsData.map((item) => {
+          <Concert concertsData={concertsData} />
+          {/* {concertsData.map((item) => {
             return (
               <div key={item.id} className='concert-item'>
                 <p>{item.name}</p>
@@ -44,7 +59,7 @@ function DatePickerFilter() {
                 <p>{item.id}</p>
               </div>
             );
-          })}
+          })} */}
         </div>
         <p className='title'>Selected Concerts</p>
         <div>{filteredConcert}</div>

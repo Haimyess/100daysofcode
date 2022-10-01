@@ -17,6 +17,9 @@ import LoadMore from "./Components/LoadMore";
 import CreditCard from "./Components/CreditCard";
 import FAQs from "./Components/FAQs";
 import Tabs from "./Components/Tabs";
+import NavBarCondiitional from "./Components/NavBarCondiitonal";
+
+// To be developed
 import DatePickerFilter from "./Components/DatePickerFilter";
 
 function App() {
@@ -49,6 +52,7 @@ function App() {
         <Route path='credit-card' element={<CreditCard />} />
         <Route path='faqs' element={<FAQs />} />
         <Route path='tabs' element={<Tabs />} />
+        <Route path='conditional-rendering' element={<NavBarCondiitional />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
       </Routes>
     </div>

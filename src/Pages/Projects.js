@@ -14,6 +14,10 @@ function Projects() {
     { name: "Credit Card", link: "credit-card" },
     { name: "FAQs", link: "faqs" },
     { name: "Tabs", link: "tabs" },
+    { name: "Tabs", link: "tabs" },
+    { name: "Nav bar conditional", link: "conditional-rendering" },
+
+    // To be developed
     { name: "Date Filter", link: "date-filter" },
   ];
   return (

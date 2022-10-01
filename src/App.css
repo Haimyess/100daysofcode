@@ -16,6 +16,7 @@
 .title {
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* ------------------------------- */
@@ -441,6 +442,12 @@ input::placeholder {
   align-items: center;
   flex-direction: column;
 }
+.tab-wrapper {
+  display: flex;
+
+}
+/* .tab-content {
+} */
 
 .tabs {
   /* border: 1px solid #000000; */
@@ -454,6 +461,8 @@ input::placeholder {
   padding: .5rem;
   font-size: 1.2rem;
   border: none;
+  text-decoration: none;
+  color: #000000;
   /* background-color: #777; */
   /* color: #fff; */
   cursor: pointer;
@@ -461,11 +470,89 @@ input::placeholder {
   background-color: #ffff;
   font-weight: bold;
 }
-/* .tab-btn.active {
+
+/* .active {
+  border-bottom: 1px solid #000000;
+} */
+
+/* .tab-underline {
+  text-decoration: underline;
+  color: red;
+} */
+/* .tab-btn:active{
   border-bottom: 2px solid #0000;
- color: #777;
+  color: #777;
  font-size: 2rem;
 } */
+
+/* ------------------------------- */
+/* -----------CONDIITONAL---------- */
+/* ------------------------------- */
+
+
+.conditional-wrapper {
+width: 90vw;
+  
+}
+
+.user-input-container {
+  /* margin-top: 3rem; */
+  /* width: 95vw; */
+  /* margin: 0 auto;  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-input {
+  display: flex;
+  align-items: center;
+}
+.name-question-input {
+  padding: .8rem;
+}
+
+.question-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.login-btn {
+  padding: .8rem;
+  font-size: 1rem;
+}
+
+.navbar {
+  width: 100vw;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000000;
+}
+
+.username {
+  text-align: center;
+}
+.profile-icons {
+  margin-right: 1rem;
+  
+}
+
+.icon {
+  margin: 1rem;
+  padding: .5rem;
+  text-decoration: none;
+  color: #000000;
+  transition: .4s;
+}
+
+.profile-container {
+  
+  display: flex;
+  align-items: center;
+}
+
+
+
 
 /* ------------------------------- */
 /* -----------DATE PICKER---------- */
