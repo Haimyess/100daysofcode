@@ -552,6 +552,70 @@ width: 90vw;
 }
 
 
+/* ------------------------------- */
+/* -----------BUTTONS FILTER---------- */
+/* ------------------------------- */
+
+.buttons-wrapper {
+  width: 90%;
+  height: 50vh;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+
+}
+
+.btn {
+  /* padding-inline-start: 5%; */
+  padding: .5rem;
+  margin: .5rem;
+  font-size: 1rem;
+
+}
+
+.countries-container {
+  /* border: 1px solid #000; */
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.countries {
+  border: 1px solid #000;
+  width: 20%;
+  /* height: 20%; */
+  padding: 1rem 0;
+  
+  /* word-wrap: break-word; */
+  /* padding: 3.5rem 2.5rem; */
+/* 
+  width: 7vw;
+  height: 7vw; */
+ 
+}
+
+.all-btn {
+  border: none;
+  border: 1px solid #000;
+  background-color: #ffff;
+}
+
+.country-name {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.country-language {
+  text-align: center;
+}
 
 
 /* ------------------------------- */

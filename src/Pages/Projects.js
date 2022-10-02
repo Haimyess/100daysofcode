@@ -14,7 +14,7 @@ function Projects() {
     { name: "Credit Card", link: "credit-card" },
     { name: "FAQs", link: "faqs" },
     { name: "Tabs", link: "tabs" },
-    { name: "Tabs", link: "tabs" },
+    { name: "Buttons filter", link: "buttons" },
     { name: "Nav bar conditional", link: "conditional-rendering" },
 
     // To be developed
