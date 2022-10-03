@@ -6,19 +6,20 @@ import Header from "../Components/Header";
 
 function Projects() {
   const projects = [
-    { name: "Read More", link: "readmore" },
-    { name: "Clock", link: "clock" },
-    { name: "Modal", link: "modal" },
-    { name: "Dark mode", link: "color-mode" },
-    { name: "Load More", link: "loadmore" },
-    { name: "Credit Card", link: "credit-card" },
-    { name: "FAQs", link: "faqs" },
-    { name: "Tabs", link: "tabs" },
-    { name: "Buttons filter", link: "buttons" },
-    { name: "Nav bar conditional", link: "conditional-rendering" },
+    { name: "Read More", link: "readmore", id: 1 },
+    { name: "Clock", link: "clock", id: 2 },
+    { name: "Modal", link: "modal", id: 3 },
+    { name: "Dark mode", link: "color-mode", id: 4 },
+    { name: "Load More", link: "loadmore", id: 5 },
+    { name: "Credit Card", link: "credit-card", id: 6 },
+    { name: "FAQs", link: "faqs", id: 7 },
+    { name: "Tabs", link: "tabs", id: 8 },
+    { name: "Buttons filter", link: "buttons", id: 9 },
+    { name: "Dropdown", link: "dropdown", id: 10 },
+    { name: "Nav bar conditional", link: "conditional-rendering", id: 11 },
 
     // To be developed
-    { name: "Date Filter", link: "date-filter" },
+    { name: "Date Filter", link: "date-filter", id: 12 },
   ];
   return (
     <div>
@@ -34,10 +35,8 @@ function Projects() {
         <div className='project-grid'>
           {projects.map((project) => {
             return (
-              <div className='project'>
-                <p>
-                  <Link to={`/${project.link}`}> {project.name}</Link>
-                </p>
+              <div key={project.id} className='project'>
+                <Link to={`/${project.link}`}> {project.name}</Link>
               </div>
             );
           })}
