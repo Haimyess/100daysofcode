@@ -23,6 +23,7 @@ import NavBarCondiitional from "./Components/NavBarCondiitonal";
 import DatePickerFilter from "./Components/DatePickerFilter";
 import ButtonFilter from "./Components/ButtonsFilter";
 import Dropdown from "./Components/Dropdown";
+import FormValidation from "./Components/FormValidation";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path='buttons' element={<ButtonFilter />} />
         <Route path='conditional-rendering' element={<NavBarCondiitional />} />
         <Route path='dropdown' element={<Dropdown />} />
+        <Route path='form-validation' element={<FormValidation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
       </Routes>
     </div>

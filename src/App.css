@@ -16,8 +16,10 @@
 .title {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-right: 2rem;
+  /* margin-bottom: 3rem; */
 }
+
 
 /* ------------------------------- */
 /* ------------HOME------------ */
@@ -690,7 +692,46 @@ transition: .4s;
 }
 
 
+/* ------------------------------- */
+/* -----------FORM VALIDATION---------- */
+/* ------------------------------- */
 
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-validation {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.validation-label {
+  font-size: .9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.input-validation {
+  padding: .5rem;
+  margin: .5rem 0;
+  
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+.validation-btn {
+  width: 50%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.require-input {
+  color: rgb(228, 12, 12);
+  margin-bottom:.5rem;
+}
 
 /* ------------------------------- */
 /* -----------DATE PICKER---------- */

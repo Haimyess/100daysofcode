@@ -16,7 +16,8 @@ function Projects() {
     { name: "Tabs", link: "tabs", id: 8 },
     { name: "Buttons filter", link: "buttons", id: 9 },
     { name: "Dropdown", link: "dropdown", id: 10 },
-    { name: "Nav bar conditional", link: "conditional-rendering", id: 11 },
+    { name: "Form Validation", link: "form-validation", id: 11 },
+    { name: "Nav bar conditional", link: "conditional-rendering", id: 12 },
 
     // To be developed
     { name: "Date Filter", link: "date-filter", id: 12 },
