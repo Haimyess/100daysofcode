@@ -7,7 +7,7 @@ import data from "../media/data";
 function LoadMore() {
   const [items, setItems] = useState(data);
   const [load, setLoad] = useState(9);
-  const [disable, setDisable] = useState(true);
+  // const [disable, setDisable] = useState(true);
 
   console.log(items.length);
 

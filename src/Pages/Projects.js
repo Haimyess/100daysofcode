@@ -18,9 +18,11 @@ function Projects() {
     { name: "Dropdown", link: "dropdown", id: 10 },
     { name: "Form Validation", link: "form-validation", id: 11 },
     { name: "Nav bar conditional", link: "conditional-rendering", id: 12 },
+    { name: "Card Carousel", link: "card-carousel", id: 13 },
+    { name: "Text Animation", link: "text-animation", id: 14 },
 
     // To be developed
-    { name: "Date Filter", link: "date-filter", id: 12 },
+    { name: "Date Filter", link: "date-filter", id: 15 },
   ];
   return (
     <div>

@@ -24,6 +24,8 @@ import DatePickerFilter from "./Components/DatePickerFilter";
 import ButtonFilter from "./Components/ButtonsFilter";
 import Dropdown from "./Components/Dropdown";
 import FormValidation from "./Components/FormValidation";
+import CardCarousel from "./Components/CardCarousel";
+import TextAnimation from "./Components/TextAnimation";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
         <Route path='conditional-rendering' element={<NavBarCondiitional />} />
         <Route path='dropdown' element={<Dropdown />} />
         <Route path='form-validation' element={<FormValidation />} />
+        <Route path='card-carousel' element={<CardCarousel />} />
+        <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
       </Routes>
     </div>
