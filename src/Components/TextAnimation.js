@@ -10,56 +10,56 @@ function TextAnimation() {
 
   const listOfIslands = ["Hawaii", "Madagascar", "Cayman", "Seychelles"];
 
-  const [currText, setCurrText] = useState(listOfIslands[0]);
   const [indexText, setIndexText] = useState(0);
-  const [indexWord, setIndexWord] = useState(0);
 
-  //   const [seconds, setSeconds] = useState(0);
+  const [currText, setCurrText] = useState([]);
 
-  //   const index = useRef(0);
+  // -------------------------------------------
+  // -------------------------------------------
+  // -------------------------------------------
+  //   WORDS
 
-  //   const word = "Bienvenido";
-  //   const [word, setWord] = useState(currText[0]);
-
-  //   Display each letter
-  //   useEffect(() => {
-  //     const wordInterval = setInterval(() => {
-  //       const letters = currText.split("");
-  //       //   console.log(letters);
-
-  //       setIndexWord((indexWord) => indexWord + 1);
-  //       setCurrText((letter) => letter + letters[indexWord]);
-
-  //       if (indexWord >= currText.length - 1) {
-  //         setIndexWord(0);
-  //       }
-  //     }, 300);
-
-  //     return () => clearInterval(wordInterval);
-  //   }, [indexWord]);
-
-  //   Changing the words
   useEffect(() => {
     const interval = setInterval(() => {
-      //   index.current++;
-
       setIndexText((index) => index + 1);
+
+      // const map = listOfIslands[indexText];
 
       setCurrText(listOfIslands[indexText]);
 
-      if (indexText >= listOfIslands.length - 1) {
+      // I need to loop the list of islands and every time i am in one string word/phrase, i gotta loop over it also. so its nested loop with if statements
+
+      if (indexText == listOfIslands.length - 1) {
         setIndexText(0);
       }
-
-      //   Loop every each one of the strings within the array and display one by one in an animation.
-
-      //   setSeconds((seconds) => seconds + 1);
-
-      //   });
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [indexText]);
+
+  // -------------------------------------------
+  // -------------------------------------------
+  // -------------------------------------------
+
+  // LETTER
+
+  // useEffect(() => {
+  //   const letterInterval = setInterval(() => {
+  //     setIndexLetter((letter) => letter + 1);
+
+  //     if (indexLetter < uniqueIsland.length) {
+  //       setCurrWord((prev) => prev + uniqueIsland[indexLetter]);
+  //     }
+  //     if (indexLetter > uniqueIsland.length - 1) {
+  //       setIndexLetter(0);
+  //       setCurrWord("");
+  //     }
+  //   }, [500]);
+
+  //   return () => clearInterval(letterInterval);
+  // }, [indexLetter]);
+
+  // console.log(listOfIslands[0][indexLetter]);
 
   return (
     <div>
@@ -77,8 +77,6 @@ function TextAnimation() {
             <br /> to live are:{" "}
             <span className='text-animation'>{currText}</span>
           </p>
-
-          {/* <p>{palabra}</p> */}
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../App.css";
+
 function Header() {
   return (
     <header className='nav-container'>
