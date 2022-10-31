@@ -5,8 +5,6 @@ import { Typewriter } from "react-simple-typewriter";
 
 import { Link } from "react-router-dom";
 
-import logo from "/Users/gyngee/Documents/100daysofcode/src/media/logo.png";
-
 function Home() {
   // function Home({ projects }) {
 
