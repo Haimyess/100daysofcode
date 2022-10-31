@@ -41,7 +41,7 @@ function App() {
     { name: "Dropdown", link: "dropdown", id: 10 },
     { name: "Form Validation", link: "form-validation", id: 11 },
     { name: "Nav bar conditional", link: "conditional-rendering", id: 12 },
-    { name: "Card Carousel", link: "card-carousel", id: 13 },
+    // { name: "Card Carousel", link: "card-carousel", id: 13 },
     { name: "Text Animation", link: "text-animation", id: 14 },
 
     // To be developed
@@ -80,7 +80,7 @@ function App() {
         <Route path='conditional-rendering' element={<NavBarCondiitional />} />
         <Route path='dropdown' element={<Dropdown />} />
         <Route path='form-validation' element={<FormValidation />} />
-        <Route path='card-carousel' element={<CardCarousel />} />
+        {/* <Route path='card-carousel' element={<CardCarousel />} /> */}
         <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
       </Routes>
