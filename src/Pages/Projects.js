@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import Header from "../Components/Header";
 
 function Projects({ projects }) {
+  console.log(projects);
   return (
-    <div>
+    <div className='projects-wrapper'>
       <Header />
 
       <div className='project-container'>
@@ -19,9 +20,11 @@ function Projects({ projects }) {
         <div className='project-grid'>
           {projects.map((project) => {
             return (
-              <div key={project.id} className='project'>
-                <Link to={`/${project.link}`}> {project.name}</Link>
-              </div>
+              <Link to={`/${project.link}`} className='project'>
+                <div key={project.id} className='project-card'>
+                  {project.name}
+                </div>
+              </Link>
             );
           })}
         </div>

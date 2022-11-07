@@ -26,6 +26,7 @@ import Dropdown from "./Components/Dropdown";
 import FormValidation from "./Components/FormValidation";
 import CardCarousel from "./Components/CardCarousel";
 import TextAnimation from "./Components/TextAnimation";
+import Movies from "./Components/Movies";
 
 function App() {
   const projects = [
@@ -43,9 +44,10 @@ function App() {
     { name: "Nav bar conditional", link: "conditional-rendering", id: 12 },
     // { name: "Card Carousel", link: "card-carousel", id: 13 },
     { name: "Text Animation", link: "text-animation", id: 14 },
+    { name: "Movies App", link: "movies", id: 15 },
 
     // To be developed
-    { name: "Date Filter", link: "date-filter", id: 15 },
+    { name: "Date Filter", link: "date-filter", id: 30 },
   ];
   return (
     <div className='App'>
@@ -83,6 +85,8 @@ function App() {
         {/* <Route path='card-carousel' element={<CardCarousel />} /> */}
         <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
+
+        <Route path='movies' element={<Movies />} />
       </Routes>
     </div>
   );

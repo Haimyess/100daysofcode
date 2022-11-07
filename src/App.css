@@ -122,18 +122,41 @@ margin: 0 auto;
 /* -------------PROJECTS----------- */
 /* ------------------------------- */
 
+.projects-wrapper {
+  border: 1px solid red;
+}
+.project {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 250px; */
+}
+
+.project-card {
+    text-align: center;
+  vertical-align: middle;
+
+}
+
 .project-grid {
   display: grid;
+
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 2rem;
+  /* column-gap: 2rem; */
+  gap: 2rem;
   text-align: center;
-  margin: 3rem 0 0 3rem;
+  margin: 3rem 0 0 0;
+  border: 1px solid green;
+  padding: 2rem;
   /* width: 90vw;
   margin: 0 auto; */
 }
 
-.project-grid > div {
+.project-grid > a{
   border: 1px solid green;
+ 
 }
 
 
