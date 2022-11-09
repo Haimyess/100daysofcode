@@ -26,7 +26,8 @@ import Dropdown from "./Components/Dropdown";
 import FormValidation from "./Components/FormValidation";
 import CardCarousel from "./Components/CardCarousel";
 import TextAnimation from "./Components/TextAnimation";
-import Movies from "./Components/Movies";
+import PopularMovies from "./Components/MovieApp/pages/PopularMovies";
+import MovieLayout from "./Components/MovieApp/pages/MovieLayout";
 
 function App() {
   const projects = [
@@ -86,7 +87,14 @@ function App() {
         <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
 
-        <Route path='movies' element={<Movies />} />
+        <Route path='/movies' element={<MovieLayout />}>
+          {/* popular movies with filter */}
+          <Route index element={<PopularMovies />} />
+          {/* likes page */}
+          <Route path='likes' element={""} />
+          {/* Individual movie page */}
+          <Route path=':movieId' element={""} />
+        </Route>
       </Routes>
     </div>
   );
