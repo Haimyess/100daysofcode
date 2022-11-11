@@ -28,6 +28,8 @@ import CardCarousel from "./Components/CardCarousel";
 import TextAnimation from "./Components/TextAnimation";
 import PopularMovies from "./Components/MovieApp/pages/PopularMovies";
 import MovieLayout from "./Components/MovieApp/pages/MovieLayout";
+import MoviePage from "./Components/MovieApp/pages/MoviePage";
+import MovieLikes from "./Components/MovieApp/pages/MovieLikes";
 
 function App() {
   const projects = [
@@ -91,9 +93,9 @@ function App() {
           {/* popular movies with filter */}
           <Route index element={<PopularMovies />} />
           {/* likes page */}
-          <Route path='likes' element={""} />
+          <Route path='likes' element={<MovieLikes />} />
           {/* Individual movie page */}
-          <Route path=':movieId' element={""} />
+          <Route path=':movieid' element={<MoviePage />} />
         </Route>
       </Routes>
     </div>

@@ -53,7 +53,7 @@ function PopularMovies() {
         ) : (
           filteredMovies.map((movie) => {
             return (
-              <Link key={movie.id} to={`/${movie.title}`}>
+              <Link key={movie.id} to={`/movies/${movie.id}`}>
                 <div className='movie-card'>
                   <img
                     className='movie-img'

@@ -6,6 +6,13 @@ import Header from "../Components/Header";
 
 function Projects({ projects }) {
   console.log(projects);
+
+  // const size = 4;
+  // const projectDivided = [];
+
+  // while (projects.length) {
+  //   projectDivided.push(projects.splice(0, size));
+  // }
   return (
     <div className='projects-wrapper'>
       <Header />
