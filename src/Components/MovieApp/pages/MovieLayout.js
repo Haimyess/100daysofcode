@@ -10,10 +10,12 @@ import MovieHeader from "../components/MovieHeader";
 
 function MovieLayout() {
   return (
-    <div className='movie-wrapper'>
-      <MovieHeader />
-      <Outlet />
-    </div>
+    <section className='movie-background'>
+      <div className='movie-wrapper'>
+        <MovieHeader />
+        <Outlet />
+      </div>
+    </section>
   );
 }
 

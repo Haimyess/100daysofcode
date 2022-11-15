@@ -1,7 +1,13 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
+
+import IconButton from "@mui/material/IconButton";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
+import { LikeContext } from "../context/LikeContext";
 
 import { useParams } from "react-router-dom";
 
@@ -12,8 +18,9 @@ function MoviePage() {
   // const [movieImages, setMovieImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const [like, setLike] = useState([]);
+  const { likes, setLikes, isLike, setIsLike } = useContext(LikeContext);
   console.log([movie]);
+  console.log(likes);
 
   const params = useParams();
 
@@ -33,72 +40,93 @@ function MoviePage() {
     getMovie();
   }, []);
 
-  // useEffect(() => {
-  //   const getImages = async () => {
-  //     const movieImagesUrl = `https://api.themoviedb.org/3/movie/${params.movieid}/images?api_key=50395059f53249a5a21f7f2fad96e49&language=en-US`;
+  const handleLike = (clickedMovie) => {
+    const exist = likes.find((movie) => {
+      return movie.id === clickedMovie.id;
+    });
 
-  //     try {
-  //       const response = await axios.get(movieImagesUrl);
+    if (!exist) {
+      const updatedLikes = [...likes, clickedMovie];
+      setLikes(updatedLikes);
+    } else {
+      const deleteFromLikes = likes.filter(
+        (like) => like.id !== clickedMovie.id
+      );
+      setLikes([...deleteFromLikes]);
+    }
 
-  //       setMovieImages([response.data]);
-  //       setLoading(false);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   getImages();
-  // }, []);
-
-  const handleLike = (movie) => {
-    console.log(movie);
-
-    setLike((prev) => prev + movie);
+    // if (!isLike) {
+    //   if (!exist) {
+    //     const updatedLikes = [...likes, clickedMovie];
+    //     setLikes(updatedLikes);
+    //   }
+    // } else {
+    //   const deleteMovie = likes.filter((mov) => mov.id !== clickedMovie);
+    //   setLikes(deleteMovie);
+    // }
   };
 
   return (
-    <div>
+    <main>
       {loading ? (
         <p>loading</p>
       ) : (
         movie.map((singleMovie) => {
           return (
-            <>
-              <header>
-                <div className='singlemovie-container'>
-                  <div>
-                    <div>
-                      <img
-                        className='singlemovie-poster'
-                        src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
-                      />
-                    </div>
-
-                    <div>
-                      <h1>{singleMovie.title}</h1>
-                      <p>{singleMovie.tagline}</p>
-
-                      <div>
-                        <button onClick={() => handleLike(singleMovie)}>
-                          Like
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div></div>
+            <div key={singleMovie.id}>
+              <section className='singlemovie-container'>
+                {/* Image */}
+                <div>
+                  <img
+                    className='singlemovie-poster'
+                    src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
+                  />
                 </div>
 
-                <img
-                  className='singlemovie-img'
-                  src={`https://image.tmdb.org/t/p/w500/${singleMovie.backdrop_path}`}
-                />
-              </header>
-              <main></main>
-            </>
+                <div className='single-movie-info-container'>
+                  <h1 className='singlemovie-title'>{singleMovie.title}</h1>
+                  <p>{singleMovie.tagline}</p>
+                  <span>
+                    {singleMovie.genres.map((genre, i) => (
+                      <span key={i}> {genre.name} </span>
+                    ))}
+                  </span>
+
+                  <div>
+                    {/* <button onClick={() => handleLike(singleMovie)}>
+                      Like
+                    </button> */}
+
+                    <IconButton onClick={() => handleLike(singleMovie)}>
+                      {likes.includes(singleMovie.id) ? (
+                        <FavoriteIcon />
+                      ) : (
+                        <FavoriteBorderIcon />
+                      )}
+                      {/* {like.includes(singleMovie) ? (
+                        <FavoriteIcon />
+                      ) : (
+                        <FavoriteBorderIcon />
+                      )} */}
+                    </IconButton>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <p>About the movie</p>
+                <p>{singleMovie.overview}</p>
+
+                <div>
+                  <p>{singleMovie.release_date}</p>
+                  {/* <p>{singleMovie.spoken_languages}</p> */}
+                  <p>{singleMovie.runtime}</p>
+                </div>
+              </section>
+            </div>
           );
         })
       )}
-    </div>
+    </main>
   );
 }
 

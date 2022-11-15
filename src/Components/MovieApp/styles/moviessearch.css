@@ -1,0 +1,13 @@
+.movies-search {
+    margin-right: 1rem;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-input {
+    border: none;
+    width: 50%;
+    /* transform: translate(20px); */
+   
+}

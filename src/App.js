@@ -30,6 +30,7 @@ import PopularMovies from "./Components/MovieApp/pages/PopularMovies";
 import MovieLayout from "./Components/MovieApp/pages/MovieLayout";
 import MoviePage from "./Components/MovieApp/pages/MoviePage";
 import MovieLikes from "./Components/MovieApp/pages/MovieLikes";
+import { LikeProvider } from "./Components/MovieApp/context/LikeContext";
 
 function App() {
   const projects = [
@@ -89,7 +90,13 @@ function App() {
         <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
 
-        <Route path='/movies' element={<MovieLayout />}>
+        <Route
+          path='/movies'
+          element={
+            <LikeProvider>
+              <MovieLayout />
+            </LikeProvider>
+          }>
           {/* popular movies with filter */}
           <Route index element={<PopularMovies />} />
           {/* likes page */}
