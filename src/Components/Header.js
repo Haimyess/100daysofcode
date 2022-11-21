@@ -8,8 +8,9 @@ import "../App.css";
 function Header() {
   return (
     <header className='nav-container'>
-      <Link className='logo' to='/'>
-        <img src='' alt='Logo' />
+      <Link className='logo-link' to='/'>
+        <p className='logo'>100DaysCodingReact</p>
+        {/* <img src={{ logo }} alt='Logo' /> */}
       </Link>
       <nav>
         <ul>
