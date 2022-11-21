@@ -43,25 +43,25 @@ function Projects({ projects }) {
         </div>
         <div>
           <Swiper
-            slidesPerView={6}
+            // slidesPerView={5}
             spaceBetween={30}
             // slidesPerGroup={3}
             cssMode={true}
             loop={true}
-            // breakpoints={{
-            //   640: {
-            //     slidesPerView: 1.3,
-            //     // spaceBetween: 20,
-            //   },
-            //   768: {
-            //     slidesPerView: 2.3,
-            //     // spaceBetween: 40,
-            //   },
-            //   1024: {
-            //     slidesPerView: 4.3,
-            //     // spaceBetween: 50,
-            //   },
-            // }}
+            breakpoints={{
+              600: {
+                slidesPerView: 1.3,
+                // spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2.3,
+                // spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4.3,
+                // spaceBetween: 50,
+              },
+            }}
             // loopFillGroupWithBlank={true}
             // navigation={true}
             // modules={[Pagination, Navigation]}
