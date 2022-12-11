@@ -31,14 +31,17 @@ import MovieLayout from "./Components/MovieApp/pages/MovieLayout";
 import MoviePage from "./Components/MovieApp/pages/MoviePage";
 import MovieLikes from "./Components/MovieApp/pages/MovieLikes";
 import { LikeProvider } from "./Components/MovieApp/context/LikeContext";
+import OnScroll from "./Components/OnScroll";
 
 function App() {
   const projects = [
+    { name: "Movies App", link: "movies", id: 15 },
+    { name: "On Scroll", link: "scroll", id: 16 },
+    { name: "Dark mode", link: "color-mode", id: 4 },
+    { name: "Load More", link: "loadmore", id: 5 },
     { name: "Read More", link: "readmore", id: 1 },
     { name: "Clock", link: "clock", id: 2 },
     { name: "Modal", link: "modal", id: 3 },
-    { name: "Dark mode", link: "color-mode", id: 4 },
-    { name: "Load More", link: "loadmore", id: 5 },
     { name: "Credit Card", link: "credit-card", id: 6 },
     { name: "FAQs", link: "faqs", id: 7 },
     { name: "Tabs", link: "tabs", id: 8 },
@@ -48,7 +51,6 @@ function App() {
     { name: "Nav bar conditional", link: "conditional-rendering", id: 12 },
     // { name: "Card Carousel", link: "card-carousel", id: 13 },
     { name: "Text Animation", link: "text-animation", id: 14 },
-    { name: "Movies App", link: "movies", id: 15 },
 
     // To be developed
     { name: "Date Filter", link: "date-filter", id: 30 },
@@ -89,6 +91,7 @@ function App() {
         {/* <Route path='card-carousel' element={<CardCarousel />} /> */}
         <Route path='text-animation' element={<TextAnimation />} />
         <Route path='date-filter' element={<DatePickerFilter />} />
+        <Route path='scroll' element={<OnScroll />} />
 
         <Route
           path='/movies'

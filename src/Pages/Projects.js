@@ -37,8 +37,8 @@ function Projects({ projects }) {
         <div className='project-container-info'>
           <h1 className='projects-title'>Pojects</h1>
           <p>
-            Take a look at them. You will find here some of the most imprtant
-            features a common website has with the minimu CSS.
+            Take a look at them. You will find here some of the most important
+            features a common website has with the minimum CSS.
           </p>
         </div>
         <div>
@@ -47,7 +47,7 @@ function Projects({ projects }) {
             spaceBetween={30}
             // slidesPerGroup={3}
             cssMode={true}
-            loop={true}
+            // loop={true}
             breakpoints={{
               600: {
                 slidesPerView: 1.3,

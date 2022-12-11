@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Switch from "@mui/material/Switch";
+import Header from "./Header";
 
 // export const ThemeContext = createContext(null)
 
@@ -15,7 +16,8 @@ function ColorMode() {
   };
   return (
     <div className='colormode-wrapper' id={theme}>
-      <header className='nav-container'>
+      <Header />
+      {/* <header className='nav-container'>
         <Link className='logo' to='/'>
           <img src='' alt='Logo' />
         </Link>
@@ -26,7 +28,7 @@ function ColorMode() {
             </Link>
           </ul>
         </nav>
-      </header>
+      </header> */}
       <div className='colormode-container'>
         <Switch onClick={handleMode} />
         <p className='colormode-p'>Dark mode</p>

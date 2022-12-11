@@ -5,6 +5,8 @@ import { Typewriter } from "react-simple-typewriter";
 
 import { Link } from "react-router-dom";
 
+import "../styles/home.css";
+
 function Home() {
   // function Home({ projects }) {
 
