@@ -9,20 +9,41 @@ import "../styles/onscroll.css";
 
 function OnScroll() {
   const firstSectionRef = useRef();
+  const infoRef = useRef();
+  const servicesRef = useRef();
+  const datesRef = useRef();
+  const reviewsRef = useRef();
+  const locationRef = useRef();
   const [firstSectionVisible, setFirstSectionVisible] = useState();
-  console.log(firstSectionVisible);
+  const [activeSection, setActiveSection] = useState();
+  const [activeInfo, setActiveInfo] = useState();
+  // console.log(activeSection);
 
+  // Showing or hiding sub navbar
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      //   const entry = entries[0];
-      console.log("entries", entries[0].target.clientHeight);
+    const observerSubNav = new IntersectionObserver((entries) => {
+      console.log("entries", entries[0]);
       setFirstSectionVisible(entries[0].isIntersecting);
     });
-    observer.observe(firstSectionRef.current);
+    observerSubNav.observe(firstSectionRef.current);
   }, []);
 
+  //  highlighting sections sub navbar
   useEffect(() => {
-    // const
+    const sectionsObserver = new IntersectionObserver(
+      (entries) => {
+        setActiveInfo(entries[0].isIntersecting);
+      },
+      { threshold: 1 }
+    );
+
+    // What if i can pass to a state the element or something to compare to?
+
+    sectionsObserver.observe(infoRef.current);
+    // sectionsObserver.observe(servicesRef.current);
+    // sectionsObserver.observe(datesRef.current);
+    // sectionsObserver.observe(reviewsRef.current);
+    // sectionsObserver.observe(locationRef.current);
   }, []);
 
   return (
@@ -53,9 +74,12 @@ function OnScroll() {
           <nav className='subnav'>
             <div className='subnav-container'>
               <ul className='subnav-list'>
-                <li className='subnav-item'>Info</li>
+                <li className={`'subnav-item' ${activeInfo && "active"} `}>
+                  Info
+                </li>
                 <li className='subnav-item'>Services</li>
                 <li className='subnav-item'>Dates</li>
+                <li className='subnav-item'>Reviews</li>
                 <li className='subnav-item'>Location</li>
               </ul>
             </div>
@@ -103,12 +127,12 @@ function OnScroll() {
 
       <main className='main-container'>
         <section ref={firstSectionRef} className='first-section section'>
-          <h2>About</h2>
+          <h2 className={activeSection && "active"}>About</h2>
         </section>
 
         <section className='second-section section'>
           <section id='left'>
-            <section>
+            <section ref={infoRef}>
               <h2>Info</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -140,7 +164,7 @@ function OnScroll() {
                 fugiat est ea, nemo officiis suscipit
               </p>
             </section>
-            <section>
+            <section ref={servicesRef}>
               <h2>Services</h2>
               <p>
                 autem, temporibus voluptates doloribus rem! Magni quia et optio
@@ -179,7 +203,7 @@ function OnScroll() {
                 fugiat est ea, nemo officiis suscipit
               </p>
             </section>
-            <section>
+            <section ref={datesRef}>
               <h2>Dates</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -237,8 +261,12 @@ function OnScroll() {
             </div>
           </aside>
         </section>
-        <section className='third-section section'>Reviews</section>
-        <section className='fourth-section section'>Location</section>
+        <section ref={reviewsRef} className='third-section section'>
+          Reviews
+        </section>
+        <section ref={locationRef} className='fourth-section section'>
+          Location
+        </section>
       </main>
     </div>
   );
